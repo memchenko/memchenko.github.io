@@ -7,6 +7,7 @@ import { StrictMode } from "react";
 import { Leva } from "leva";
 import EnvirontmentAndStaging from "./EnvironmentAndStaging";
 import LoadingModels from "./LoadingModels";
+import ThreeDText from "./3DText";
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
 
@@ -21,10 +22,26 @@ root.render(
         position: [-4, 4, 8],
       }}
     >
-      <LoadingModels />
+      <ThreeDText />
     </Canvas>
   </StrictMode>
 );
+
+// root.render(
+//   <StrictMode>
+//     <Canvas
+//       shadows
+//       camera={{
+//         fov: 45,
+//         near: 0.1,
+//         far: 200,
+//         position: [-4, 4, 8],
+//       }}
+//     >
+//       <LoadingModels />
+//     </Canvas>
+//   </StrictMode>
+// );
 
 // const created = ({ gl, scene }) => {
 //   // gl.setClearColor("#f41");
