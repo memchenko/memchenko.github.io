@@ -6,30 +6,47 @@ import * as THREE from "three";
 import { StrictMode } from "react";
 import { Leva } from "leva";
 import EnvirontmentAndStaging from "./EnvironmentAndStaging";
+import LoadingModels from "./LoadingModels";
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
-
-const created = ({ gl, scene }) => {
-  // gl.setClearColor("#f41");
-  // scene.background = new THREE.Color("#f41");
-};
 
 root.render(
   <StrictMode>
     <Canvas
-      shadows={false}
+      shadows
       camera={{
         fov: 45,
         near: 0.1,
         far: 200,
-        position: [3, 2, 6],
+        position: [-4, 4, 8],
       }}
-      // onCreated={created}
     >
-      <EnvirontmentAndStaging />
+      <LoadingModels />
     </Canvas>
   </StrictMode>
 );
+
+// const created = ({ gl, scene }) => {
+//   // gl.setClearColor("#f41");
+//   // scene.background = new THREE.Color("#f41");
+// };
+
+// root.render(
+//   <StrictMode>
+//     <Canvas
+//       shadows={false}
+//       camera={{
+//         fov: 45,
+//         near: 0.1,
+//         far: 200,
+//         position: [3, 2, 6],
+//       }}
+//       // onCreated={created}
+//     >
+//       <EnvirontmentAndStaging />
+//     </Canvas>
+//   </StrictMode>
+// );
 
 // root.render(
 //   <StrictMode>
