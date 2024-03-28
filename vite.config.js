@@ -1,9 +1,28 @@
+import react from "@vitejs/plugin-react";
 import { resolve } from "path";
+import { transformWithEsbuild } from "vite";
 
 export default {
   root: "app/",
   publicDir: "../static/",
   base: "./",
+  plugins: [
+    // React support
+    react(),
+
+    // .js file support as if it was JSX
+    {
+      name: "load+transform-js-files-as-jsx",
+      async transform(code, id) {
+        if (!id.match(/src\/.*\.js$/)) return null;
+
+        return transformWithEsbuild(code, id, {
+          loader: "jsx",
+          jsx: "automatic",
+        });
+      },
+    },
+  ],
   server: {
     host: true, // Open to local network and display URL
     open: !("SANDBOX_URL" in process.env || "CODESANDBOX_HOST" in process.env), // Open if it's not a CodeSandbox
@@ -16,6 +35,7 @@ export default {
       input: {
         index: resolve(__dirname, "./app/index.html"),
         basic3d: resolve(__dirname, "./app/showcase/basic3d/index.html"),
+        rtf: resolve(__dirname, "./app/showcase/rtf/index.html"),
       },
     },
   },
