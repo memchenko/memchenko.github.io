@@ -26,8 +26,11 @@
   "dependencies": {
     "@react-three/drei": "^9.99.0",
     "@react-three/fiber": "^8.15.8",
+    "@react-three/postprocessing": "2.15",
     "leva": "^0.9.35",
     "lil-gui": "^0.19.0",
+    "postprocessing": "6.35",
+    "processing": "^0.2.0",
     "r3f-perf": "7.1",
     "react": "18.2",
     "react-dom": "18.2",

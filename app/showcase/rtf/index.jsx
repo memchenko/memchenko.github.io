@@ -10,6 +10,7 @@ import LoadingModels from "./LoadingModels/LoadingModels";
 import ThreeDText from "./3DText/3DText";
 import { Portal } from "./Portal/Portal";
 import { MouseEvents } from "./MouseEvents/MouseEvents";
+import { PostProcessing } from "./PostProcessing/PostProcessing";
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
 
@@ -17,7 +18,7 @@ root.render(
   <StrictMode>
     <Canvas
       // adding the flat stops using toneMapping
-      flat
+      // flat
       // enables shadows
       // shadows
       camera={{
@@ -30,7 +31,8 @@ root.render(
       {/* <LoadingModels /> */}
       {/* <ThreeDText /> */}
       {/* <Portal /> */}
-      <MouseEvents />
+      {/* <MouseEvents /> */}
+      <PostProcessing />
     </Canvas>
   </StrictMode>
 );
