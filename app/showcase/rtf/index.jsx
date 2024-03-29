@@ -11,12 +11,14 @@ import ThreeDText from "./3DText/3DText";
 import { Portal } from "./Portal/Portal";
 import { MouseEvents } from "./MouseEvents/MouseEvents";
 import { PostProcessing } from "./PostProcessing/PostProcessing";
+import { Portfolio } from "./Portfolio/Portfolio";
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
 
 root.render(
   <StrictMode>
     <Canvas
+      className="r3f"
       // adding the flat stops using toneMapping
       // flat
       // enables shadows
@@ -32,7 +34,8 @@ root.render(
       {/* <ThreeDText /> */}
       {/* <Portal /> */}
       {/* <MouseEvents /> */}
-      <PostProcessing />
+      {/* <PostProcessing /> */}
+      <Portfolio />
     </Canvas>
   </StrictMode>
 );
