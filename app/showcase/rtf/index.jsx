@@ -9,6 +9,7 @@ import EnvirontmentAndStaging from "./EnvironmentAndStaging/EnvironmentAndStagin
 import LoadingModels from "./LoadingModels/LoadingModels";
 import ThreeDText from "./3DText/3DText";
 import { Portal } from "./Portal/Portal";
+import { MouseEvents } from "./MouseEvents/MouseEvents";
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
 
@@ -28,7 +29,8 @@ root.render(
     >
       {/* <LoadingModels /> */}
       {/* <ThreeDText /> */}
-      <Portal />
+      {/* <Portal /> */}
+      <MouseEvents />
     </Canvas>
   </StrictMode>
 );
