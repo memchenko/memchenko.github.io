@@ -1,6 +1,7 @@
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
 import { transformWithEsbuild } from "vite";
+import glsl from "vite-plugin-glsl";
 
 export default {
   root: "app/",
@@ -9,6 +10,9 @@ export default {
   plugins: [
     // React support
     react(),
+
+    // GLSL support
+    glsl(),
 
     // .js file support as if it was JSX
     {
