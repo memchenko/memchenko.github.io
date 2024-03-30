@@ -12,6 +12,7 @@ import { Portal } from "./Portal/Portal";
 import { MouseEvents } from "./MouseEvents/MouseEvents";
 import { PostProcessing } from "./PostProcessing/PostProcessing";
 import { Portfolio } from "./Portfolio/Portfolio";
+import { Experiment } from "./Experiment/Experiment";
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
 
@@ -27,7 +28,8 @@ root.render(
         fov: 45,
         near: 0.1,
         far: 200,
-        position: [-4, 4, 8],
+        // position: [-4, 4, 8],
+        position: [0, 2, 20],
       }}
     >
       {/* <LoadingModels /> */}
@@ -35,7 +37,9 @@ root.render(
       {/* <Portal /> */}
       {/* <MouseEvents /> */}
       {/* <PostProcessing /> */}
-      <Portfolio />
+      {/* <Portfolio /> */}
+
+      <Experiment />
     </Canvas>
   </StrictMode>
 );
