@@ -13,6 +13,7 @@ import { MouseEvents } from "./MouseEvents/MouseEvents";
 import { PostProcessing } from "./PostProcessing/PostProcessing";
 import { Portfolio } from "./Portfolio/Portfolio";
 import { Experiment } from "./Experiment/Experiment";
+import { Physics } from "./Physics/Physics";
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
 
@@ -23,7 +24,7 @@ root.render(
       // adding the flat stops using toneMapping
       // flat
       // enables shadows
-      // shadows
+      shadows
       camera={{
         fov: 45,
         near: 0.1,
@@ -38,8 +39,8 @@ root.render(
       {/* <MouseEvents /> */}
       {/* <PostProcessing /> */}
       {/* <Portfolio /> */}
-
-      <Experiment />
+      {/* <Experiment /> */}
+      <Physics />
     </Canvas>
   </StrictMode>
 );
