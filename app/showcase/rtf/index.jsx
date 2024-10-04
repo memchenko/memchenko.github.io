@@ -17,68 +17,73 @@ import { Experiment } from "./Experiment/Experiment";
 import { Physics } from "./Physics/Physics";
 import { Game } from "./Game/Game";
 import { Interface } from "./Game//Interface";
+import { Electronic } from "./Electronic";
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
 
-root.render(
-  <StrictMode>
-    <KeyboardControls
-      map={[
-        // don't use just W - use KeyW instead because
-        // not all keyboards are QWERTY but with Key prefix
-        // position of keys will be mapped consistently to
-        // all types of keyboards
-        { name: "forward", keys: ["ArrowUp", "KeyW"] },
-        { name: "backward", keys: ["ArrowDown", "KeyS"] },
-        { name: "leftward", keys: ["ArrowLeft", "KeyA"] },
-        { name: "rightward", keys: ["ArrowRight", "KeyD"] },
-        { name: "jump", keys: ["Space"] },
-      ]}
-    >
-      <Canvas
-        className="r3f"
-        shadows
-        camera={{
-          fov: 45,
-          near: 0.1,
-          far: 200,
-          position: [0, 2, 20],
-        }}
-      >
-        <Game />
-      </Canvas>
-      <Interface />
-    </KeyboardControls>
-  </StrictMode>
-);
-
 // root.render(
 //   <StrictMode>
-//     <Canvas
-//       className="r3f"
-//       // adding the flat stops using toneMapping
-//       // flat
-//       // enables shadows
-//       shadows
-//       camera={{
-//         fov: 45,
-//         near: 0.1,
-//         far: 200,
-//         // position: [-4, 4, 8],
-//         position: [0, 2, 20],
-//       }}
+//     <KeyboardControls
+//       map={[
+//         // don't use just W - use KeyW instead because
+//         // not all keyboards are QWERTY but with Key prefix
+//         // position of keys will be mapped consistently to
+//         // all types of keyboards
+//         { name: "forward", keys: ["ArrowUp", "KeyW"] },
+//         { name: "backward", keys: ["ArrowDown", "KeyS"] },
+//         { name: "leftward", keys: ["ArrowLeft", "KeyA"] },
+//         { name: "rightward", keys: ["ArrowRight", "KeyD"] },
+//         { name: "jump", keys: ["Space"] },
+//       ]}
 //     >
-//       {/* <LoadingModels /> */}
-//       {/* <ThreeDText /> */}
-//       {/* <Portal /> */}
-//       {/* <MouseEvents /> */}
-//       {/* <PostProcessing /> */}
-//       {/* <Portfolio /> */}
-//       {/* <Experiment /> */}
-//       {/* <Physics /> */}
-//     </Canvas>
+//       <Canvas
+//         className="r3f"
+//         shadows
+//         camera={{
+//           fov: 45,
+//           near: 0.1,
+//           far: 200,
+//           position: [0, 2, 20],
+//         }}
+//       >
+//         <Game />
+//       </Canvas>
+//       <Interface />
+//     </KeyboardControls>
 //   </StrictMode>
 // );
+
+root.render(
+  <StrictMode>
+    <Canvas
+      className="r3f"
+      // adding the flat stops using toneMapping
+      // flat
+      // enables shadows
+      shadows
+      gl={{
+        antialias: true,
+      }}
+      camera={{
+        fov: 45,
+        near: 0.1,
+        far: 200,
+        // position: [-4, 4, 8],
+        position: [0, 2, 20],
+      }}
+    >
+      {/* <LoadingModels /> */}
+      {/* <ThreeDText /> */}
+      {/* <Portal /> */}
+      {/* <MouseEvents /> */}
+      {/* <PostProcessing /> */}
+      {/* <Portfolio /> */}
+      {/* <Experiment /> */}
+      {/* <Physics /> */}
+      <Electronic />
+    </Canvas>
+  </StrictMode>
+);
 
 // const created = ({ gl, scene }) => {
 //   // gl.setClearColor("#f41");
